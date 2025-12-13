@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #171430;
+    padding: 1.5rem;
+}
+
+#titulo-da-pagina {
+    color: white;
+    font-size: 3rem;
+}
+
+#cabecalho {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#input-texto {
+    width: 50rem;
+    height: 3rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    border: 0;
+}
+
+#campo-entrada-de-dados {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+#conteudo-principal {
+    text-align: center;
+}
+
+#botao-adicionar {
+    width: 5rem;
+    height: 3rem;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.tarefa {
+    background-color: white;
+    width: 40rem;
+    height: 2.5rem;
+    border-radius: 5px;
+}
