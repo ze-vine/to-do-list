@@ -8,17 +8,20 @@
     <title>Lista de Tarefas</title>
 </head>
 <body>
-    <header id="cabecalho">
-        <h1 id="titulo-da-pagina">Lista de Tarefas</h1>
-    </header>
-    <main id="conteudo-principal">
-        <div id="campo-entrada-de-dados">
-            <input type="text" id="input-texto" placeholder="Digite a tarefa aqui">
-            <button id="botao-adicionar">+</button>
-        </div>
-        <div id="container-das-tarefas">
-        </div>
-    </main>
-    <footer></footer>
+    <div class="to-do-list">
+        <header class="to-do-list__header">
+            <h1 class="to-do-list__title">Lista de Tarefas</h1>
+        </header>
+        <main class="to-do-list__main">
+            <div class="to-do-list__input-group">
+                <input type="text" id="input-activity" class="to-do-list__input" placeholder="Digite a tarefa aqui">
+                <button id="button-add" class="to-do-list__button-add to-do-list__button-add--activated">Adicionar</button>
+            </div>
+            <div class="to-do-list__items">
+                <div class="to-do-list__item"></div>
+            </div>
+        </main>
+        <footer class="to-do-list__footer"></footer>
+    </div>
 </body>
 </html>

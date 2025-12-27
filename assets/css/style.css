@@ -1,79 +1,51 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-html {
-    font-size: 16px;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(68, 68, 68);
-    padding: 1.5rem;
-}
-
-#titulo-da-pagina {
-    color: white;
-    font-size: 3rem;
-}
-
-#cabecalho {
-    text-align: center;
-    margin-top: 1rem;
-}
-
-#input-texto {
-    background-color: rgba(0, 0, 0, 0.808);
-    color: white;
-    width: 100%;
-    max-width: 50rem;
-    height: 3rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    border: 0;
-    padding-left: 10px;
-}
-
-#input-texto::placeholder {
-    color: rgb(68, 68, 68);
-}
-
-#campo-entrada-de-dados {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
+    font-family: sans-serif;
+    background: linear-gradient(to right, #0f003f, #480e82);
 }
 
-#conteudo-principal {
-    text-align: center;
-}
-
-#botao-adicionar {
-    min-width: 3rem;
-    height: 3rem;
-    font-size: 2.5rem;
-    background-color: rgba(0, 0, 0, 0.808);
+.to-do-list {
+    margin-top: 50px;
     color: white;
+    font-size: 25px;
+}
+
+.to-do-list__input {
+    width: 300px;
+    height: 30px;
+    border-style: none;
     border-radius: 10px;
-    border: 0;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.to-do-list__main {
+    margin-top: 30px;
+}
+
+.to-do-list__button-add {
+    padding: 7.5px;
+    border-style: none;
+    border-radius: 10px;
     cursor: pointer;
 }
 
-#container-das-tarefas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
-    flex-shrink: 1;
+.to-do-list__button-add--activated:hover {
+    background-color: #0f003f;
+    color: white;
 }
 
-.tarefa {
-    background-color: rgba(0, 0, 0, 0.808);
+.to-do-list__item {
     width: 100%;
-    max-width: 55rem;
-    height: 4rem;
-    border-radius: 10px;
+    height: 50px;
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 5px;
 }
