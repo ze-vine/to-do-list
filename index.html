@@ -13,13 +13,14 @@
             <h1 class="to-do-list__title">Lista de Tarefas</h1>
         </header>
         <main class="to-do-list__main">
-            <div class="to-do-list__input-group">
-                <input type="text" id="input-activity" class="to-do-list__input" placeholder="Digite a tarefa aqui">
-                <button id="button-add" class="to-do-list__button-add to-do-list__button-add--activated">Adicionar</button>
+            <div class="to-do-list__group">
+                <div class="to-do-list__input-group">
+                    <input type="text" id="input-activity" class="to-do-list__input-text" placeholder="Digite a tarefa aqui">
+                    <button id="button-add" class="to-do-list__button-add">Adicionar</button>
+                </div>
+                <span class="to-do-list__span-error">Nenhuma tarefa digitada</span>
             </div>
-            <div class="to-do-list__items">
-                <div class="to-do-list__item"></div>
-            </div>
+            <div class="to-do-list__itemsGroup"></div>
         </main>
         <footer class="to-do-list__footer"></footer>
     </div>

@@ -17,13 +17,21 @@ body {
     font-size: 25px;
 }
 
-.to-do-list__input {
+.to-do-list__input-text {
     width: 300px;
     height: 30px;
     border-style: none;
     border-radius: 10px;
     padding-left: 10px;
     font-size: 15px;
+}
+
+.to-do-list__input-text--error {
+    border: 2px solid red;
+}
+
+.item__input-checkbox[type="checkbox"] {
+    margin-left: 5px;
 }
 
 .to-do-list__main {
@@ -37,15 +45,39 @@ body {
     cursor: pointer;
 }
 
-.to-do-list__button-add--activated:hover {
+.to-do-list__button-add:hover {
     background-color: #0f003f;
     color: white;
 }
 
-.to-do-list__item {
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 50px;
     background-color: white;
+    color: black;
     margin-top: 30px;
     border-radius: 5px;
+    font-size: 18px;
+}
+
+.item__p {
+    margin-right: 10px;
+}
+
+.to-do-list__span-error {
+    display: none;
+    color: red;
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+.visible {
+    display: block;
+}
+
+.to-do-list__group {
+    height: 41px;
 }
