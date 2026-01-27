@@ -28,9 +28,11 @@ buttonAdd.addEventListener("click", () => {
         const item = createItem();
         const checkbox = createCheckBox();
         const textItem = createTextItem(treatedText);
+        const deleteButton = createDeleteButton();
 
         addItemToDOM(item, checkbox);
         addItemToDOM(item, textItem);
+        addItemToDOM(item, deleteButton);
         addItemToDOM(itemsGroup, item);
     }
 
@@ -55,6 +57,12 @@ function createTextItem(text) {
     textItem.classList.add("item__p");
     textItem.innerHTML = text;
     return textItem;
+}
+
+function createDeleteButton() {
+    const deleteButton = document.createElement("img");
+    deleteButton.setAttribute("src", "./assets/img/delete-button.svg");
+    return deleteButton;
 }
 
 function treatText(text) {
