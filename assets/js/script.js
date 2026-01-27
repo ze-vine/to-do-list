@@ -19,20 +19,11 @@ inputText.addEventListener("blur", () => {
 });
 
 buttonAdd.addEventListener("click", () => {
-    const treatedText = treatText(inputText.value);
-
     if (treatedText === "") {
         inputText.classList.add("to-do-list__input-text--error");
         spanError.classList.add("visible");
     } else {
         const item = createItem();
-        const checkbox = createCheckBox();
-        const textItem = createTextItem(treatedText);
-        const deleteButton = createDeleteButton();
-
-        addItemToDOM(item, checkbox);
-        addItemToDOM(item, textItem);
-        addItemToDOM(item, deleteButton);
         addItemToDOM(itemsGroup, item);
     }
 
@@ -41,7 +32,15 @@ buttonAdd.addEventListener("click", () => {
 
 function createItem() {
     const newItem = document.createElement("div");
+    const checkbox = createCheckBox();
+    const textItem = createTextItem(inputText.target.value);
+    const deleteButton = createDeleteButton();
+
     newItem.classList.add("item");
+    newItem.appendChild(checkbox);
+    newItem.appendChild(textItem);
+    newItem.appendChild(deleteButton);
+
     return newItem;
 }
 
