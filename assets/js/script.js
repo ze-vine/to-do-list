@@ -19,7 +19,7 @@ inputText.addEventListener("blur", () => {
 });
 
 buttonAdd.addEventListener("click", () => {
-    if (treatedText === "") {
+    if (treatText(inputText.value) === "") {
         inputText.classList.add("to-do-list__input-text--error");
         spanError.classList.add("visible");
     } else {
@@ -33,7 +33,7 @@ buttonAdd.addEventListener("click", () => {
 function createItem() {
     const newItem = document.createElement("div");
     const checkbox = createCheckBox();
-    const textItem = createTextItem(inputText.target.value);
+    const textItem = createTextItem(treatText(inputText.value));
     const deleteButton = createDeleteButton();
 
     newItem.classList.add("item");
