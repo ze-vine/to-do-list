@@ -32,14 +32,27 @@ buttonAdd.addEventListener("click", () => {
 
 function createItem() {
     const newItem = document.createElement("div");
+    const groupItemLeft = document.createElement("div");
+    const groupItemRight = document.createElement("div");
     const checkbox = createCheckBox();
     const textItem = createTextItem(treatText(inputText.value));
     const deleteButton = createDeleteButton();
+    const editButton = createEditButton();
 
     newItem.classList.add("item");
-    newItem.appendChild(checkbox);
-    newItem.appendChild(textItem);
-    newItem.appendChild(deleteButton);
+    groupItemLeft.classList.add("item__group-left");
+    groupItemRight.classList.add("item__group-right");
+    deleteButton.classList.add("item__trash-icon")
+    editButton.classList.add("item__edit-icon")
+
+    newItem.appendChild(groupItemLeft);
+    newItem.appendChild(groupItemRight);
+
+    groupItemLeft.appendChild(checkbox);
+    groupItemLeft.appendChild(textItem);
+
+    groupItemRight.appendChild(editButton);
+    groupItemRight.appendChild(deleteButton);
 
     return newItem;
 }
@@ -62,6 +75,12 @@ function createDeleteButton() {
     const deleteButton = document.createElement("img");
     deleteButton.setAttribute("src", "./assets/img/delete-button.svg");
     return deleteButton;
+}
+
+function createEditButton() {
+    const editButton = document.createElement("img");
+    editButton.setAttribute("src", "./assets/img/edit-button.jpg");
+    return editButton;
 }
 
 function treatText(text) {
